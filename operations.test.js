@@ -45,11 +45,13 @@ test('map', () => {
 test('anidada', () => {
   expect(operations.anidada(2,3)).toBe(13);
 });
-/*
+
+/*  --Test removed--
 test('scope', () => {
-  expect(operations.scope(230)).toBe("Test");
+  expect(operations.scope(230)).toBe();
 });
 */
+
 test('cerosIzq', () => {
   expect(operations.cerosIzq(24,6)).toBe("000024");
 });

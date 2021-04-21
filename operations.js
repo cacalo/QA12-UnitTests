@@ -70,7 +70,7 @@ function anidada(a,b) {
   return cuadrado(a) + cuadrado(b);
 }
 // anidada(2,3)
-
+/*
 //10
 const scope = () => {
   var x = 10;
@@ -79,9 +79,9 @@ const scope = () => {
   }
   return dentro;
 }
-//resultado = scope()(230); COMENTADO CALO
+resultado = scope()(230);
 // console.log("resultado",resultado)
-
+*/
 //11
 // Esta función devuelve una cadena con ceros a la izquierda
 const cerosIzq = (num, totalLength) => {
