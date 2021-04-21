@@ -1,33 +1,33 @@
 // 1
 const texto = (texto) => {
-  console.log(texto)
+  return texto
 }
 // texto('text')
 
 // 2
 const suma = (sumandoA, SumandoB) => {
-  return console.log(sumandoA + SumandoB);
+  return sumandoA + SumandoB;
 }
 // suma(33,66)
 
 // 3
 const resta = (minuendo, sustraendo) => {
-  return console.log(minuendo - sustraendo);
+  return minuendo - sustraendo;
 }
 // resta(2,3)
 
 // 4
 const multiplicacion = (factorA, factorB) => {
-  return console.log(factorA * factorB);
+  return factorA * factorB;
 }
 // multiplicacion(3,4)
 
 // 5
 const division = (dividendo, divisor) => {
   if  ( divisor === 0)  {
-    return console.log('No se puede dividir por 0');
+    return 'No se puede dividir por 0';
   } else  {
-    return console.log(dividendo / divisor);
+    return dividendo / divisor;
   }
 }
 // division(2,0)
@@ -35,14 +35,16 @@ const division = (dividendo, divisor) => {
 // 6
 const tablaMultiplicar = (multiplicando, multiplicador) => {
   if (multiplicador === undefined) multiplicador = 10;
-
-  for (i = 0; i <= multiplicador; i++) console.log(multiplicando + " x", i + " = ", multiplicando * i);
+  for (let i = 0; i <= multiplicador; i++){
+    //console.log(multiplicando + " x", i + " = ", multiplicando * i);
+    return multiplicando * i
+  }
 }
 // tablaMultiplicar(3,4)
 
 // 7
 const potencia = (base, exponente) => {
-  return console.log(Math.pow(base, exponente))
+  return Math.pow(base, exponente)
 }
 // potencia(2,3)
 
@@ -52,7 +54,7 @@ const map = (a, b) => {
   let i;
   for (i = 0; i != b.length; i++)
     result[i] = a(b[i]);
-  return console.log(result);
+  return result;
 }
 const a = (x) => {
   return x * x * x;
@@ -65,7 +67,7 @@ function anidada(a,b) {
   function cuadrado(x) {
     return x * x;
   }
-  return console.log(cuadrado(a) + cuadrado(b));
+  return cuadrado(a) + cuadrado(b);
 }
 // anidada(2,3)
 
@@ -77,7 +79,7 @@ const scope = () => {
   }
   return dentro;
 }
-resultado = scope()(230);
+//resultado = scope()(230); COMENTADO CALO
 // console.log("resultado",resultado)
 
 //11
@@ -88,6 +90,8 @@ const cerosIzq = (num, totalLength) => {
   for (var i = 1; i <= numCeros; i++) {
       numStr = "0" + numStr;
   }
-  return console.log(numStr);
+  return numStr;
 }
 // cerosIzq(24,6)
+
+export {texto, suma, resta, multiplicacion, division, tablaMultiplicar, potencia, map, a, array, anidada, cerosIzq};
